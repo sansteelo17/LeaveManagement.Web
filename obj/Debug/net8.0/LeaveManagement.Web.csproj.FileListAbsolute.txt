@@ -136,3 +136,6 @@
 /Users/georgeriley/code/LeaveManagement.Web/obj/Debug/net8.0/LeaveManagement.Web.pdb
 /Users/georgeriley/code/LeaveManagement.Web/obj/Debug/net8.0/LeaveManagement.Web.genruntimeconfig.cache
 /Users/georgeriley/code/LeaveManagement.Web/obj/Debug/net8.0/ref/LeaveManagement.Web.dll
+/Users/georgeriley/code/LeaveManagement.Web/bin/Debug/net8.0/Npgsql.dll
+/Users/georgeriley/code/LeaveManagement.Web/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/georgeriley/code/LeaveManagement.Web/obj/Debug/net8.0/LeaveManagement.Web.sourcelink.json

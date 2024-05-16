@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5CcdI9Z6e2r+Wqh+vLc3wTF0ppdJdgM3x/69faauUoH9dGRTtvhbGcg5WYBE2zL9ymvfCaNCDhXkypiXRa8k1g==",
+  "dgSpecHash": "5acudPIuXDUSNdNfhGHJz9t91jvntcQ3n4g8ROn10eb8ZWoW1ZsWTO7Lspt4JyJIlr4HHq2unmc0BtE+khlgLA==",
   "success": true,
   "projectFilePath": "/Users/georgeriley/code/LeaveManagement.Web/LeaveManagement.Web.csproj",
   "expectedPackageFiles": [
@@ -40,6 +40,8 @@
     "/Users/georgeriley/.nuget/packages/microsoft.extensions.options/8.0.2/microsoft.extensions.options.8.0.2.nupkg.sha512",
     "/Users/georgeriley/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "/Users/georgeriley/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/georgeriley/.nuget/packages/npgsql/8.0.3/npgsql.8.0.3.nupkg.sha512",
+    "/Users/georgeriley/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.4/npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",
     "/Users/georgeriley/.nuget/packages/sqlitepclraw.bundle_e_sqlite3/2.1.6/sqlitepclraw.bundle_e_sqlite3.2.1.6.nupkg.sha512",
     "/Users/georgeriley/.nuget/packages/sqlitepclraw.core/2.1.6/sqlitepclraw.core.2.1.6.nupkg.sha512",
     "/Users/georgeriley/.nuget/packages/sqlitepclraw.lib.e_sqlite3/2.1.6/sqlitepclraw.lib.e_sqlite3.2.1.6.nupkg.sha512",

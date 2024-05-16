@@ -5,12 +5,20 @@ using LeaveManagement.Web.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var connectionString = builder.Configuration.GetConnectionString("DBConnection")
+?? throw new InvalidOperationException("Connection string 'DBConnection' not found.");
+
+// Retrieve PostgreSQL password from environment variable
+var postgresPassword = Environment.GetEnvironmentVariable("PG_PASSWORD");
+
+// Replace the placeholder with the actual password
+connectionString = connectionString.Replace("{{PASSWORD}}", postgresPassword);
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
+    options.UseNpgsql(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
