@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using LeaveManagement.Configurations.Entities;
+using LeaveManagement.Web.Configurations.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -16,6 +18,10 @@ public class ApplicationDbContext : IdentityDbContext<Employee>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder); // Ensure to call the base method
+        modelBuilder.ApplyConfiguration(new RoleSeedConfiguration());
+        modelBuilder.ApplyConfiguration(new UserSeedConfiguration());
+        modelBuilder.ApplyConfiguration(new UserRoleSeedConfiguration());
+
 
         foreach (var entityType in modelBuilder.Model.GetEntityTypes())
         {

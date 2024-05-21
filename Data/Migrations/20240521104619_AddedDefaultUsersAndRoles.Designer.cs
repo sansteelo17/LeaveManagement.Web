@@ -3,6 +3,7 @@ using System;
 using LeaveManagement.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace LeaveManagement.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240521104619_AddedDefaultUsersAndRoles")]
+    partial class AddedDefaultUsersAndRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,41 +108,37 @@ namespace LeaveManagement.Web.Data.Migrations
                         {
                             Id = "f059abae-4be1-42ca-8c74-40d702aebac4",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8860083b-815e-426e-bc99-4c71883e3e16",
+                            ConcurrencyStamp = "22655dd6-f098-41eb-8f97-b4333af2aa23",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "admin@leavemgt.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             Firstname = "System",
                             Lastname = "Admin",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@LEAVEMGT.COM",
-                            NormalizedUserName = "ADMIN@LEAVEMGT.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMOEj/3ch27BDIwGTauuQPkIOB0ewAHsjN6JAKX51BoZsQe6QoHbNEZdeiM5CdfQqA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDCOvMisUyGDDBJZlPNuGGxQf8i/qH0BarlPQQLw885CzqXEK/U394HbCtKRfQyQUg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ea9b0d04-9b61-45d2-b09e-3c87bb66c783",
-                            TwoFactorEnabled = false,
-                            UserName = "admin@leavemgt.com"
+                            SecurityStamp = "da4d4132-2a17-421a-9827-17369ea1cf04",
+                            TwoFactorEnabled = false
                         },
                         new
                         {
                             Id = "771b467d-5362-40b6-afc4-83f339d383f7",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1131c688-7858-4e07-9112-88761bae34d3",
+                            ConcurrencyStamp = "d38c354b-15a2-44da-81dd-09dfca280c9a",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Email = "peshtaco@gmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             Firstname = "System",
                             Lastname = "User",
                             LockoutEnabled = false,
                             NormalizedEmail = "PESHTACO@GMAIL.COM",
-                            NormalizedUserName = "PESHTACO@GMAIL.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAELv6Wm7F6guibLvBDvGP17cWCZLLCKNp/lwaeSNT139dEX+LqwsN6AXg9NAtGpRvIQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGU+e4dBtdkGRKAyuT0nTXsBg3/dC6GcFNuUvOtc16+zSHMiq2S809YzXf+I6dFcOg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5d9357bc-c40f-4373-9ece-299e15436e81",
-                            TwoFactorEnabled = false,
-                            UserName = "peshtaco@gmail.com"
+                            SecurityStamp = "fb499ede-e1f3-4b21-8cff-ae0a24867eba",
+                            TwoFactorEnabled = false
                         });
                 });
 
