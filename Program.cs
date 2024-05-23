@@ -32,6 +32,7 @@ builder.Services.AddDefaultIdentity<Employee>(options => options.SignIn.RequireC
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
+builder.Services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
 
 builder.Services.AddAutoMapper(typeof(MapperConfig));
 
