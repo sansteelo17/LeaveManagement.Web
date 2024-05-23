@@ -102,4 +102,10 @@ public class LeaveAllocationRepository : GenericRepository<LeaveAllocation>, ILe
         await UpdateAsync(leaveAllocation);
         return true;
     }
+
+    public async Task<LeaveAllocation?> GetEmployeeAllocation(string employeeId, int leaveTypeId)
+    {
+        return await _context.LeaveAllocations.FirstOrDefaultAsync(
+            allocation => allocation.EmployeeId == employeeId && allocation.LeaveTypeId == leaveTypeId);
+    }
 }
